@@ -60,4 +60,33 @@ function updateHeader() {
 
 updateHeader();
 
+
+
+
+// consumer.js
+
+// Smooth scroll to signup section when button clicked
+document.getElementById('sign-up').addEventListener('click', function() {
+  alert("Thanks for your interest! Signup functionality is coming soon.");
+});
+
+// Dynamic Welcome Message based on Time of Day
+function updateHeaderMessage() {
+  const headerMessage = document.querySelector('header h1');
+  const hours = new Date().getHours();
+  let greeting;
+
+  if (hours < 12) {
+    greeting = 'Good Morning, Shoppers!';
+  } else if (hours < 18) {
+    greeting = 'Good Afternoon, Shoppers!';
+  } else {
+    greeting = 'Good Evening, Shoppers!';
+  }
+
+  headerMessage.innerText = `${greeting} Start Saving with LastBite`;
+}
+
+updateHeaderMessage();
+
   
