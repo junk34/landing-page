@@ -32,4 +32,32 @@ document.getElementById('learn-more').addEventListener('click', function() {
     });
   });
   
+
+  // Retailers
+  // retailer.js
+
+// Smooth scroll to signup section when "Sign Up Now" button is clicked
+document.getElementById('start-now').addEventListener('click', function() {
+  alert("Thank you for your interest! Signup functionality is coming soon.");
+});
+
+// Dynamic welcome message based on time of day
+function updateHeader() {
+  const headerMessage = document.querySelector('header h1');
+  const hours = new Date().getHours();
+  let greeting;
+
+  if (hours < 12) {
+    greeting = 'Good Morning, Retailers!';
+  } else if (hours < 18) {
+    greeting = 'Good Afternoon, Retailers!';
+  } else {
+    greeting = 'Good Evening, Retailers!';
+  }
+
+  headerMessage.innerText = greeting + ' Join LastBite';
+}
+
+updateHeader();
+
   
